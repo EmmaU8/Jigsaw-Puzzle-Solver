@@ -92,7 +92,7 @@ def get_matches(pieces, screen_pieces):
     all_matches = []
     for a in range(len(pieces)-1):
         for b in range(a+1,len(pieces)):
-            all_matches.extend(match_tiles(a,b, pieces, screen_pieces))
+            all_matches.extend(match_tiles(pieces, screen_pieces, a,b))
 
     for n in range(len(all_matches)):
         pair, ij, pointa, pointb, angle, fmatch, cmatch, fit, lock = all_matches[n]
